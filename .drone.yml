@@ -17,6 +17,7 @@ steps:
       - echo ${TEST_CASES} > test_case_temp_file
       - sed -i "s/ /+/g" test_case_temp_file
       - base64 --decode ./test_case_temp_file > cypress/integration/index.specs.js
+      - node CreateJSFile.js
       - npm install
       - npm test
   - name: result
