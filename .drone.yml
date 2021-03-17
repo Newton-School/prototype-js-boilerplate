@@ -3,7 +3,7 @@ name: default
 
 steps:
   - name: run-test-cases
-    image: newtonschool/cypress-test
+    image: cypress/included:6.6.0
     when:
       status:
         - failure
